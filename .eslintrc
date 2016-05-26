@@ -1,0 +1,10 @@
+{
+  "extends": "brightspace/node-config",
+  "globals": {
+  	"describe": true,
+  	"it": true
+  },
+  "envs": [
+  	"mocha"
+  ]
+}

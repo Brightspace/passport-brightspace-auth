@@ -1,0 +1,39 @@
+{
+  "name": "passport-brightspace-auth",
+  "version": "1.0.0",
+  "description": "A Passport.js strategy for authenticating against the Brightspace Authentication service",
+  "main": "src/brightspace-strategy.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D2LChrisC/passport-brightspace-auth.git"
+  },
+  "keywords": [
+    "Brightspace",
+    "auth",
+    "authentication",
+    "passport",
+    "strategy"
+  ],
+  "author": "Chris Carleton",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/D2LChrisC/passport-brightspace-auth/issues"
+  },
+  "homepage": "https://github.com/D2LChrisC/passport-brightspace-auth#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint-config-brightspace": "^0.2.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "sinon": "^1.17.4"
+  },
+  "dependencies": {
+    "brightspace-auth-validation": "^5.2.0",
+    "passport-strategy": "^1.0.0"
+  }
+}
