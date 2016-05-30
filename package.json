@@ -33,6 +33,7 @@
     "sinon": "^1.17.4"
   },
   "dependencies": {
+    "bluebird": "^3.4.0",
     "brightspace-auth-validation": "^5.2.0",
     "passport-strategy": "^1.0.0"
   }

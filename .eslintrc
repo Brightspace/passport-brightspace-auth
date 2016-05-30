@@ -4,6 +4,9 @@
   	"describe": true,
   	"it": true
   },
+  rules: {
+  	"no-console": 1
+  },
   "envs": [
   	"mocha"
   ]

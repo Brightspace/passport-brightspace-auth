@@ -5,6 +5,7 @@ var passport = require('passport-strategy'),
 	util = require('util');
 
 function BrightspaceStrategy(options) {
+	options = options || {};
 	this.name = 'brightspace';
 	this._validator = new TokenValidator(options);
 	passport.Strategy.call(this);
@@ -12,10 +13,10 @@ function BrightspaceStrategy(options) {
 
 util.inherits(BrightspaceStrategy, passport.Strategy);
 
-BrightspaceStrategy.prototype.authenticate = function(req, options) {
-	options = options || {};
+BrightspaceStrategy.prototype.authenticate = function(req) {
 	var self = this;
-	this._validator
+
+	return this._validator
 		.fromHeaders(req.headers)
 		.then(function(token) {
 			if (!token) {
