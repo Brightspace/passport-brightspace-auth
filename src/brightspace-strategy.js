@@ -16,17 +16,14 @@ util.inherits(BrightspaceStrategy, passport.Strategy);
 BrightspaceStrategy.prototype.authenticate = function(req) {
 	var self = this;
 
-	return this._validator
+	return this
+		._validator
 		.fromHeaders(req.headers)
 		.then(function(token) {
-			if (!token) {
-				self.fail('Not authorized');
-			} else {
-				self.success(token);
-			}
+			self.success(token);
 		})
 		.catch(function(err) {
-			self.error(err);
+			self.fail(err);
 		});
 };
 

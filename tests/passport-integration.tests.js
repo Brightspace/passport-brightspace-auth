@@ -52,7 +52,7 @@ describe('Integration with Passport.js', function() {
 		validatorMock
 			.expects('fromHeaders')
 			.once()
-			.returns(Promise.resolve(null));
+			.returns(Promise.reject('Not authorized'));
 
 		passport.authenticate('brightspace', function(err, token, info) {
 			expect(err).to.not.be.ok;

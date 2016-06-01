@@ -21,7 +21,7 @@ describe('Brightspace auth passport strategy', function() {
 			.expects('fromHeaders')
 			.once()
 			.withArgs(req.headers)
-			.returns(Promise.resolve(null));
+			.returns(Promise.reject('Not authorized'));
 
 		strategy.fail = failSpy;
 		strategy
@@ -57,27 +57,5 @@ describe('Brightspace auth passport strategy', function() {
 				done();
 			});
 	});
-
-	// it('Returns an error if call to auth service fails', function(done) {
-	// 	var errorSpy = sinon.spy();
-	// 	var strategy = new Strategy();
-
-	// 	var error = new Error('fail!');
-
-	// 	var validatorMock = sinon.stub(strategy._validator, 'fromHeaders');
-	// 	validatorMock.throws(error);
-
-	// 	strategy.error = errorSpy;
-	// 	strategy
-	// 		.authenticate(req, {})
-	// 		.then(function() {
-	// 		 	done('Error was not caught and handled.');
-	// 		})
-	// 		.finally(function() {
-	// 			expect(errorSpy.callCount).to.equal(1);
-	// 			expect(errorSpy.lastCall.args).to.eql([error]);
-	// 			done();
-	// 		});
-	// });
 
 });
