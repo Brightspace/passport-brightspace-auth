@@ -6,9 +6,6 @@
     "before": true,
     "afterEach": true
   },
-  rules: {
-  	"no-console": 1
-  },
   "envs": [
   	"mocha"
   ]
