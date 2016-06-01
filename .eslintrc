@@ -2,7 +2,9 @@
   "extends": "brightspace/node-config",
   "globals": {
   	"describe": true,
-  	"it": true
+  	"it": true,
+    "before": true,
+    "afterEach": true
   },
   rules: {
   	"no-console": 1

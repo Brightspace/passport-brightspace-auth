@@ -2,7 +2,7 @@
   "name": "passport-brightspace-auth",
   "version": "1.0.0",
   "description": "A Passport.js strategy for authenticating against the Brightspace Authentication service",
-  "main": "src/brightspace-strategy.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "gulp test"
   },
@@ -30,6 +30,7 @@
     "gulp-eslint": "^2.0.0",
     "gulp-mocha": "^2.2.0",
     "gulp-util": "^3.0.7",
+    "passport": "^0.3.2",
     "sinon": "^1.17.4"
   },
   "dependencies": {
