@@ -61,4 +61,24 @@ describe('Integration with Passport.js', function() {
 			done();
 		})(req, res);
 	});
+
+	it('Error is communicated if auth service is unavailable', function(done) {
+		var error = {
+			name: 'PublicKeyLookupFailedError',
+			message: 'Couldn\'t reach auth service.'
+		};
+
+		validatorMock = sinon.mock(strategy._validator);
+		validatorMock
+			.expects('fromHeaders')
+			.once()
+			.returns(Promise.reject(error));
+
+		passport.authenticate('brightspace', function(err, token, info) {
+			expect(err).to.eql(error);
+			expect(token).to.not.be.ok;
+			expect(info).to.not.be.ok;
+			done();
+		})(req, res);
+	});
 });

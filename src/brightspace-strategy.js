@@ -23,7 +23,11 @@ BrightspaceStrategy.prototype.authenticate = function(req) {
 			self.success(token);
 		})
 		.catch(function(err) {
-			self.fail(err);
+			if (err.name && err.name === 'PublicKeyLookupFailedError') {
+				self.error(err);
+			} else {
+				self.fail(err);
+			}
 		});
 };
 

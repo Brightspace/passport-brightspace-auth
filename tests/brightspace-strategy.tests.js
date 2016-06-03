@@ -58,4 +58,30 @@ describe('Brightspace auth passport strategy', function() {
 			});
 	});
 
+	it('Raises an error if auth service is unreachable', function(done) {
+		var errorSpy = sinon.spy();
+		var strategy = new Strategy();
+
+		var error = {
+			name: 'PublicKeyLookupFailedError',
+			message: 'Couldn\'t reach auth service.'
+		};
+
+		var validatorMock = sinon.mock(strategy._validator);
+		validatorMock
+			.expects('fromHeaders')
+			.once()
+			.withArgs(req.headers)
+			.returns(Promise.reject(error));
+
+		strategy.error = errorSpy;
+		strategy
+			.authenticate(req, {})
+			.then(function() {
+				expect(errorSpy.callCount).to.equal(1);
+				expect(errorSpy.lastCall.args).to.eql([error]);
+				done();
+			});
+	});
+
 });

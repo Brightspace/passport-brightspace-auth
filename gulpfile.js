@@ -1,7 +1,6 @@
 var eslint = require('gulp-eslint'),
 	gulp = require('gulp'),
-	mocha = require('gulp-mocha'),
-	util = require('gulp-util');
+	mocha = require('gulp-mocha');
 
 gulp.task('lint', function() {
 	return gulp
@@ -17,6 +16,4 @@ gulp.task('test', ['lint'], function() {
 		.pipe(mocha({ reporter: 'spec' }));
 });
 
-gulp.task('default', ['test'], function() {
-	util.log('Ok!');
-});
+gulp.task('default', ['test']);
