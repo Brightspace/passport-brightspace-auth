@@ -1,17 +1,13 @@
 language: javascript
-
 before_install:
-  - npm install -g gulp
-
+- npm install -g gulp
 script:
-  - gulp
-
+- gulp
 deploy:
   provider: npm
   email: d2ltravisdeploy@d2l.com
   api_key:
-    secure: AamPrY9gS1GgoVh5Qve+3MvDkPZ+HNg80vBEyr2YtC3l9rLZiEEpD7SdG/vxhurgYtgdozwCCfcg+q+tq0w+rcBZhjNGtk857zlZV8kFj/wMJgpVCVXY5K0eAq+84NSjz6najm5Jpo1fKWK42T4sJstzcbXhKXRy4vW2kfP89LqdBVU0rgJ5YaNLT9iFZQ6YLc0ThDOkVK14EJFTuMSY/tF6YPHziMUvVewTjvUcoBxaGaqVseqn4PwGqg6Egs4tI4ab18pwALDbnnTsnJJ5rkI2+689GAQddVR3mdnTrgVR0wdsuIGR/+uUUnIxsUPq1uxLBV/tVfSjhgEGY8+aXo6n1FsddJtU3JByMbnNmcjKXKdo41OCicuLCY3fLTODGSzrUSefwkWHt4GgaidctDzIVYkT5hWKON5rmoV4sz/X82e6ckb/OH6VscQC6GMv9epuCirDxZy8vRxn+d7Msy2ABwQ1jNtk4UX6obCFpaH7BVupM7pwHcRdA5C4V3C1SMdaN9kWVozTpH5HDCXO3ia6xh+OQr2+IIUGqBf4LIw3I26thoQWxAuLSk8WnjXRtwNPpTlCaaovO4+sDx2Z0PslAnG/OKErQgFTmMM9at90KSUzMnMYMG4RGrtOUHy6jUVzkmB9J3Oyhik/UB+seSii/LHga240RQY+EvJvzgQ=
+    secure: N21ggcdV8GkSS+6969aEyUSHESuiLVz7YGIvRTH5JkWDwCdtwSkuOwrF3vQdX9NLA/Ka8HK2ECUY+l2HJbduCquq1VXSgCrHEKqGPCIBfB7H0tWb8NKeU5C7zZ1BHM5jkpE8EZDZYAksgCENoipm5khiW9Brxvru4kaae8iG7bXeALKiB3+2Da3dF45lJ++HbR4ZiAG5J33SxVLLrOD9XEMx6qWGD1+CfKPqeH9hXAtHP3+W9SYeYC4WJawcY1QkQgpTAIKISPt/K2EpneSqkK1q8osbb0nRg72idmILnUQSt/gpK96fp1GraViVW41DI4gXr76fcnWbg+mPBTuQbwYiXALOHWMtM79YpgquyvUU0bVEnhBq8uhFh2dYoMI8DHj4RIR8Kk0TAa4h0fYn6/6FP/8ovxGBKUDVFlvQ7hQEhETmd2FiKaBsrPiqQJ1XpsGETbURyOCky8O5le63mxbFTAdn1NUL7xnwq9L6mAFXU0G/qi73fQpmKiL73yhLO80DbJ30y828Vs9T2oOyE0+taQ9UksMWgX0t+JJveBaqeC4hKED2q+W65oeli1UP5U6TL0TJiNj/IzjRBzsH3NkuHJ+OosFAh8MCurkC4F9v853U+0gPh7L7kdaY5LrQRDXsJlosGWIEafE6GEYiFWGXYM5jstB7gnWK4YW4+GI=
   on:
     tags: true
     repo: Brightspace/passport-brightspace-auth
-    
