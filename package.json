@@ -1,6 +1,6 @@
 {
   "name": "passport-brightspace-auth",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Passport.js strategy for authenticating against the Brightspace Authentication service",
   "main": "src/index.js",
   "scripts": {
