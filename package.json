@@ -20,9 +20,9 @@
   "author": "Chris Carleton",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/D2LChrisC/passport-brightspace-auth/issues"
+    "url": "https://github.com/Brightspace/passport-brightspace-auth/issues"
   },
-  "homepage": "https://github.com/D2LChrisC/passport-brightspace-auth#readme",
+  "homepage": "https://github.com/Brightspace/passport-brightspace-auth#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint-config-brightspace": "^0.2.1",
