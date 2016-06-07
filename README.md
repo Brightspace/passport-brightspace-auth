@@ -1,4 +1,7 @@
 # Brightspace Passport Authentication Strategy
+
+[![Build Status](https://travis-ci.org/Brightspace/passport-brightspace-auth.svg?branch=master)](https://travis-ci.org/Brightspace/passport-brightspace-auth)
+
 This is a Passport.js strategy for authenticating requests against the Brightspace authentication service.
 
 ## Usage
