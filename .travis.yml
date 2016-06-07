@@ -1,4 +1,7 @@
-language: javascript
+language: node_js
+node_js:
+- "4.2"
+- "5.1"
 
 before_install:
 - npm install -g gulp
