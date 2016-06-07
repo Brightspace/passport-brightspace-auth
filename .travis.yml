@@ -1,8 +1,15 @@
-language: javascript
+language: node_js
+node_js:
+- "4.2"
+- "5.1"
+
 before_install:
 - npm install -g gulp
+
 script:
+- npm install
 - gulp
+
 deploy:
   provider: npm
   email: d2ltravisdeploy@d2l.com
