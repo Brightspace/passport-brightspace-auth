@@ -7,7 +7,7 @@ var passport = require('passport-strategy'),
 function BrightspaceStrategy(options) {
 	options = options || {};
 	this.name = 'brightspace';
-	this._validator = new TokenValidator(options);
+	this._validator = options.tokenValidator || new TokenValidator(options);
 	passport.Strategy.call(this);
 }
 
